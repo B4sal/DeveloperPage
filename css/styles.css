@@ -1,0 +1,69 @@
+/* titulo russell perez dev */
+.titulo {
+    text-align: center;
+}
+
+.noc {
+    color: rgb(10, 217, 217);
+    font-size: 1.5rem;
+}
+
+.contactar
+{
+    text-align: center;
+    font-size: 1.5rem;
+    color: rgb(10, 217, 217);
+    background-color: white;
+}
+/* titulos pagina */
+h2 {
+    text-align: center;
+}
+/*subtitulos de mi pagina de servivios xd*/
+h3 {
+    text-align: cenrter;
+}
+
+/* textos */
+p {
+    text-align: center;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(255, 255, 255);
+    
+    text-align: center;
+}
+
+.container {
+    text-align: center;
+}
+
+nav {
+    text-align: center;
+    background-color: rgba(24, 112, 189, 0.8);
+    padding: 15px;
+    width: auto;
+    margin: 20px auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+nav:hover {
+    background-color: rgba(24, 112, 189, 1);
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 120px;
+    font-size: 18px;
+    transition: color 0.3s ease;
+}
+
+nav a:hover {
+    color: #ffeb3b;
+}
+
