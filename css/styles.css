@@ -1,69 +1,56 @@
-/* titulo russell perez dev */
+
+
+:root {    
+    --blanco: #fff;
+    --oscuro: #212121;
+    --primario: #ffc107;
+    --secundario: #0097a7;
+    --gris: #757575;
+    --grisclaro:#DFE9F3;
+}
+
 .titulo {
     text-align: center;
 }
 
 .noc {
-    color: rgb(10, 217, 217);
-    font-size: 1.5rem;
+    font-size: 1.1rem;
+    color: var(--secundario);
 }
 
-.contactar
-{
-    text-align: center;
-    font-size: 1.5rem;
-    color: rgb(10, 217, 217);
-    background-color: white;
-}
-/* titulos pagina */
-h2 {
-    text-align: center;
-}
-/*subtitulos de mi pagina de servivios xd*/
-h3 {
-    text-align: cenrter;
+.navegacion-principal {
+    background-color: var(--secundario);
+    display: flex;
+    justify-content: space-between; /* Distribuye los enlaces de manera uniforme */
+    align-items: center; /* Centra los elementos verticalmente */
+    padding: 1rem; /* Ajusta el espaciado del contenedor */
 }
 
-/* textos */
-p {
-    text-align: center;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: rgb(255, 255, 255);
-    
-    text-align: center;
-}
-
-.container {
-    text-align: center;
-}
-
-nav {
-    text-align: center;
-    background-color: rgba(24, 112, 189, 0.8);
-    padding: 15px;
-    width: auto;
-    margin: 20px auto;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
-    border-radius: 10px;
-    transition: background-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-nav:hover {
-    background-color: rgba(24, 112, 189, 1);
-}
-
-nav a {
-    color: white;
+.navegacion-principal a {
+    color: var(--blanco);
     text-decoration: none;
-    margin: 0 120px;
-    font-size: 18px;
-    transition: color 0.3s ease;
+    padding: 0.5rem 1rem; /* Ajusta el espacio interno de los enlaces */
+    font-weight: bold;
+    font-size: 1.6rem; /* Ajusta el tamaño de la fuente */
+    text-align: center;
+    margin: 0 1rem; /* Añade espacio entre los enlaces */
 }
 
-nav a:hover {
-    color: #ffeb3b;
+.navegacion-principal a:hover {
+    background-color: var(--primario);
+    color: var(--oscuro);
+    padding: auto;
+}
+
+
+.contenedor {
+    max-width: 120rem;
+    margin: 0 10rem;
+    padding:  0;
+}
+
+
+.nav-bg {
+    background-color: var(--secundario);
 }
 
