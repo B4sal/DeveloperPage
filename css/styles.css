@@ -1,56 +1,88 @@
-
-
-:root {    
+:root {
     --blanco: #fff;
     --oscuro: #212121;
     --primario: #ffc107;
     --secundario: #0097a7;
     --gris: #757575;
-    --grisclaro:#DFE9F3;
+    --grisclaro: #DFE9F3;
 }
 
 .titulo {
     text-align: center;
 }
 
-.noc {
-    font-size: 1.1rem;
-    color: var(--secundario);
+/* Estilo por defecto para móviles pequeños */
+body {
+    background-color: bisque;
 }
 
+/* 480px para móviles */
+@media (min-width: 480px) and (max-width: 767px) {
+    body {
+        background-color: blue;
+    }
+}
+
+/* 768px y superiores para tablets y pantallas más grandes */
+@media (min-width: 768px) {
+    body {
+        background-color: cornflowerblue;
+    }
+}
+
+/* Navegación principal en columna por defecto */
 .navegacion-principal {
     background-color: var(--secundario);
     display: flex;
-    justify-content: space-between; /* Distribuye los enlaces de manera uniforme */
-    align-items: center; /* Centra los elementos verticalmente */
-    padding: 1rem; /* Ajusta el espaciado del contenedor */
+    flex-direction: column; /* Alínea en columna por defecto */
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
 }
 
+/* Ajustes para pantallas grandes */
+@media (min-width: 768px) {
+    .navegacion-principal {
+        flex-direction: row; /* Cambia a fila en pantallas grandes */
+        justify-content: space-between;
+    }
+}
+
+/* Estilos de enlaces en la navegación */
 .navegacion-principal a {
     color: var(--blanco);
     text-decoration: none;
-    padding: 0.5rem 1rem; /* Ajusta el espacio interno de los enlaces */
+    padding: 0.5rem 1rem;
     font-weight: bold;
-    font-size: 1.6rem; /* Ajusta el tamaño de la fuente */
+    font-size: 1.6rem;
     text-align: center;
-    margin: 0 1rem; /* Añade espacio entre los enlaces */
+    margin: 0.5rem 0; /* Espacio vertical entre enlaces en móviles */
 }
 
 .navegacion-principal a:hover {
     background-color: var(--primario);
     color: var(--oscuro);
-    padding: auto;
 }
 
-
+/* Contenedor principal */
 .contenedor {
     max-width: 120rem;
-    margin: 0 10rem;
-    padding:  0;
+    margin: 0 auto;
+    padding: 0;
 }
 
-
+/* Fondo de navegación */
 .nav-bg {
     background-color: var(--secundario);
+}
+
+.hero {
+    background-image: url('../img/hero.jpg'); /* Importamos nuestra imagen como fondo el .. es para regresar un nivel del directorio */
+    background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
+    background-position: center; /* Centra la imagen */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    color: #fff; /* Ajusta el color del texto para mejor visibilidad */
+    padding: 3rem 0; /* Agrega espacio alrededor del contenido */
+    text-align: center; /* Centra el texto dentro de la sección */
 }
 
