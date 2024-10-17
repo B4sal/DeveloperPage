@@ -13,7 +13,23 @@
 
 /* Estilo por defecto para móviles pequeños */
 body {
-    background-color: bisque;
+    background-image: linear-gradient(to top, var(--grisclaro) 0%, var(--blanco) 100%);
+    font-size: 16px;
+    font-family: krub, sans-serif;
+}
+
+.h1 {
+    font-size: 3.8rem;
+}
+.h2 {
+    font-size: 2.8em;
+}
+.h3 {
+    font-size: 1.3em;
+}
+
+.h1, .h2, .h3 {
+    text-align: center;
 }
 
 /* 480px para móviles */
@@ -77,12 +93,54 @@ body {
 }
 
 .hero {
-    background-image: url('../img/hero.jpg'); /* Importamos nuestra imagen como fondo el .. es para regresar un nivel del directorio */
+    background-image: url('../img/hero.jpg'); /* Imagen de fondo */
     background-size: cover; /* Asegura que la imagen cubra todo el contenedor */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     color: #fff; /* Ajusta el color del texto para mejor visibilidad */
-    padding: 3rem 0; /* Agrega espacio alrededor del contenido */
+    padding: 12rem 0; /* Espacio alrededor del contenido */
     text-align: center; /* Centra el texto dentro de la sección */
+    position: relative; /* Permite el posicionamiento absoluto de los elementos hijos */
 }
 
+.contenido-hero {
+    position: absolute; /* Posiciona el cuadro en relación al padre .hero */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo rojo con transparencia */
+    top: 0; /* Inicia en la parte superior */
+    left: 0; /* Inicia desde la izquierda */
+    width: 100%; /* Ocupa todo el ancho del contenedor */
+    height: 100%; /* Ocupa toda la altura del contenedor */
+    display: flex; /* Usa flexbox para centrar el contenido */
+    flex-direction: column; /* Coloca el contenido en columna */
+    justify-content: center; /* Centra verticalmente */
+    align-items: center; /* Centra horizontalmente */
+    z-index: 10; /* Asegura que esté por encima de otros elementos */
+}
+
+.noc{
+    color: aqua;
+    font-size: small;
+}
+
+.btn1 {
+    background-color: var(--secundario);
+    color: var(--blanco);
+    padding: 1rem 2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    margin-top: 2rem;
+    display: inline-block;
+    border-radius: 1rem;
+    font-weight: bolder;
+}
+
+.mapa {
+    display: flex; /* Configura Flexbox para alinear elementos en fila */
+    align-items: center; /* Centra el contenido verticalmente */
+    gap: 10px; /* Ajusta el espacio entre el icono y el texto */
+}
+
+.mapa svg {
+    width: 4rem; 
+    height: 4rem;
+}
