@@ -21,9 +21,11 @@ body {
 .h1 {
     font-size: 3.8rem;
 }
+
 .h2 {
     font-size: 2.8em;
 }
+
 .h3 {
     font-size: 1.3em;
 }
@@ -35,36 +37,26 @@ body {
 /* 480px para móviles */
 @media (min-width: 480px) and (max-width: 767px) {
     body {
-        background-color: blue;
+        background-color: blue; /* Cambiar el color de fondo para móviles */
     }
 }
 
 /* 768px y superiores para tablets y pantallas más grandes */
 @media (min-width: 768px) {
     body {
-        background-color: cornflowerblue;
+        background-color: cornflowerblue; /* Cambiar el color de fondo para pantallas grandes */
     }
 }
 
-/* Navegación principal en columna por defecto */
 .navegacion-principal {
     background-color: var(--secundario);
     display: flex;
-    flex-direction: column; /* Alínea en columna por defecto */
+    flex-direction: column; /* Mantén en columna por defecto */
     justify-content: center;
-    align-items: center;
+    align-items: stretch; /* Cambiar a stretch para que los enlaces ocupen todo el ancho */
     padding: 1rem;
 }
 
-/* Ajustes para pantallas grandes */
-@media (min-width: 768px) {
-    .navegacion-principal {
-        flex-direction: row; /* Cambia a fila en pantallas grandes */
-        justify-content: space-between;
-    }
-}
-
-/* Estilos de enlaces en la navegación */
 .navegacion-principal a {
     color: var(--blanco);
     text-decoration: none;
@@ -73,12 +65,22 @@ body {
     font-size: 1.6rem;
     text-align: center;
     margin: 0.5rem 0; /* Espacio vertical entre enlaces en móviles */
+    flex: 1; /* Cada enlace ocupará el mismo espacio */
 }
 
 .navegacion-principal a:hover {
     background-color: var(--primario);
     color: var(--oscuro);
-    
+    margin: 0; /* Elimina el margen entre enlaces en hover */
+}
+
+
+/* Ajustes para pantallas grandes */
+@media (min-width: 768px) {
+    .navegacion-principal {
+        flex-direction: row; /* Cambia a fila en pantallas grandes */
+        justify-content: space-between;
+    }
 }
 
 /* Contenedor principal */
@@ -106,7 +108,7 @@ body {
 
 .contenido-hero {
     position: absolute; /* Posiciona el cuadro en relación al padre .hero */
-    background-color: rgba(0, 0, 0, 0.7); /* Fondo rojo con transparencia */
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo negro con transparencia */
     top: 0; /* Inicia en la parte superior */
     left: 0; /* Inicia desde la izquierda */
     width: 100%; /* Ocupa todo el ancho del contenedor */
@@ -118,7 +120,7 @@ body {
     z-index: 10; /* Asegura que esté por encima de otros elementos */
 }
 
-.noc{
+.noc {
     color: aqua;
     font-size: small;
 }
@@ -132,9 +134,10 @@ body {
     margin-top: 2rem;
     display: inline-block;
     border-radius: 1rem;
-    font-weight: bolder;
+    font-weight: bold;
 }
 
+/* Mapa */
 .mapa {
     display: flex; /* Configura Flexbox para alinear elementos en fila */
     align-items: center; /* Centra el contenido verticalmente */
@@ -150,8 +153,9 @@ body {
 .servicios {
     display: flex; /* Configura Flexbox para alinear los servicios en fila */
     flex-wrap: wrap; /* Permite que los servicios se envuelvan si no hay espacio */
-    justify-content: center; /* Centra los servicios en el contenedor */
+    justify-content: center; /* Centra horizontalmente los servicios en el contenedor */
     margin-top: 2rem; /* Margen superior para separar de contenido previo */
+    gap: 1rem; /* Ajusta el espacio entre los servicios */
 }
 
 /* Estilos para cada servicio */
@@ -161,6 +165,11 @@ body {
     padding: 2rem;
     text-align: center;
     width: 300px; /* Ancho fijo para cada servicio (ajusta según sea necesario) */
+    box-sizing: border-box; /* Asegura que el padding no afecte al ancho */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .servicio h3 {
@@ -173,18 +182,131 @@ body {
     text-align: center;
 }
 
+/* Mantengo el círculo intacto */
 .servicio .iconos {
-    height: 15rem;
-    width: 15rem;
+    height: 10rem;
+    width: 10rem;
     background-color: var(--primario);
-    border-radius: 50%;
+    border-radius: 50%; /* Asegura que el elemento sea un círculo */
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
 }
 
-#misser {
+
+#misser, #siuu {
     text-align: center; /* Centra el texto */
     margin: 0; /* Elimina márgenes por defecto */
     padding: 20px; /* Espaciado adicional si es necesario */
+}
+
+.formulario {
+    background-color: var(--gris);
+    width: min(60rem, 100%); /* Toma el menor valor entre 60rem y 100% */
+    margin: 0 auto; 
+    padding: 2rem;
+    border-radius: 1rem;
+}
+
+.formulario fieldset {
+    border: none;
+}
+
+.formulario legend {
+    text-align: center;
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: var(--primario);
+}
+
+.campo {
+    margin-bottom: 1rem;
+}
+
+.campo label {
+    color: var(--blanco);
+    font-weight: bold;
+    margin-bottom: .5rem;
+    display: block; /* Logra que cada label tome todo el espacio disponible y estar separado del input */
+}
+
+.input-text {
+    width: 90%;
+    border: none;
+    padding: 1.5rem;
+    border-radius: .5rem;
+}
+
+.campo textarea {
+    height: 15rem; /* Hacer más grande la altura del textarea */
+}
+
+.botton {
+    background-color: var(--secundario); /* Color de fondo del botón */
+    color: var(--blanco); /* Color del texto */
+    padding: 1rem 3rem; /* Espacio interior */
+    margin-top: 3rem; /* Separación superior */
+    font-size: 2rem; /* Tamaño de la letra */
+    text-decoration: none; /* Quitar el subrayado */
+    text-transform: uppercase; /* Convertir texto en mayúsculas */
+    font-weight: bold; /* Texto en negritas */
+    border-radius: .5rem; /* Esquinas redondeadas */
+    width: 90%; /* Ancho del botón, que abarque el 90% posible si se encuentra en una pantalla pequeña */
+    text-align: center; /* Centrar el texto del botón */
+    border: none; /* Esto afecta únicamente al boton de la etiqueta "input", si esta propiedad no existe en el enlace "a", simplemente lo ignora */
+}
+
+/* Utilidades */
+.w-sm-100 {
+    width: 100%;
+}
+
+.contenedor p {
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .w-sm-100 {
+        width: auto; 
+    }
+}
+
+.flex {
+    display: flex;
+}
+
+.alinear-derecha {
+    justify-content: flex-end;
+}
+
+@media (min-width: 768px) {
+    .contenedor-campos {
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        column-gap: 1rem;
+        grid-template-rows: auto auto 20rem; /* Darle el espacio de cada fila */
+    }
+    /* También se podría crear la clase de ayuda campo-correo para llamar el selector, 
+    pero se recomienda no crear nuevas clases si no es estrictamente necesario.
+    nth-child significa el # del hijo. El orden sería: nombre, teléfono, correo, mensaje. 
+    Como requerimos el espacio extra sólo en mensaje, que se aplica al último hijo.  */
+    .contenedor-campos :nth-child(4) {
+        grid-column: 1 / -1; /* Coloca el último hijo (mensaje) ocupando toda la fila */
+    }
+}
+
+.MA {
+    text-align: center;
+}
+
+.che {  
+    align-items: center;
+    text-align: center;
+}
+
+#sio:hover {
+    background-color: var(--primario);
+    color: var(--oscuro); /* Cambiar también el color del texto si lo deseas */
 }

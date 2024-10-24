@@ -65,17 +65,17 @@
             </svg>
             <p>Mérida, Yucatán</p>
           </div>
-          <button class="btn1" onclick="Contacto()">Contactar</button>
+          <button class="btn1" id="sio" onclick="Contacto()">Contactar</button>
 
         </div>
       </section>
 
       <div class="container">
-        <p>
+        <p class="che">
           Este es un párrafo de ejemplo para mostrar. Aquí puedes agregar una
           breve descripción de ti y tus servicios.
         </p>
-        <main class="contenedor sombra"><!--INICIA CONTENDOR SOMBRA-->
+        <section class="contenedor sombra"><!--INICIA CONTENDOR SOMBRA-->
           <h2 id="misser">Mis servicios</h2><!--título de la sección ¨'Mis servicios-->
           <!-- Sección de diseño web -->
           <div class="servicios"><!--DIV DE SERVICIOS--><!--contenedor -->
@@ -155,60 +155,56 @@
               </section>
           </div> <!-- TERMINA EL DIV DE .SERVICIOS EL PRINCIPAL -->
    
-        <section>
-          <h2>Contacto</h2>
-          <form class="formulario">
-            <legend>Llena tus datos de contacto</legend>
-            <div class="contenedor-campos">
-              <div class="campo">
-                <label for="nombre">Nombre:</label>
-                <input
-                  class="input-text"
-                  type="text"
-                  id="nombre"
-                  placeholder="Tu nombre"
-                />
-              </div>
+          <section><!--sección del formulario-->
+            <h2 class="h3">Contacto</h2>
 
-              <div class="campo">
-                <label for="telefono">Teléfono:</label>
-                <input
-                  class="input-text"
-                  type="tel"
-                  id="telefono"
-                  placeholder="Tu Teléfono"
-                />
-              </div>
-              <div class="campo">
-                <label for="correo">Correo:</label>
-                <input
-                  class="input-text"
-                  type="email"
-                  id="correo"
-                  placeholder="Tu email"
-                />
-              </div>
-              <div class="campo">
-                <label for="mensaje">Mensaje:</label>
-                <textarea
-                  name="mensaje"
-                  id="mensaje"
-                  cols="40"
-                  rows="10"
-                  placeholder="Escribe tu mensaje aquí..."
-                ></textarea>
-              </div>
-            </div>
+            <form class="formulario"> <!--creacion del formulario-->
+                <fieldset><!--Elementos relacionados con el formulario-->
+                    <!--legend> (leyenda) crea un título para un grupos los campos ( <fieldset> ) de un formulario-->
+                    <legend>
+                        Llena el formulario para comunicarte conmigo. <!--texto de titulo-->
+                    </legend><!--título del formulario-->
+                    <div class="contenedor-campos"><!--contenedor para los campos del formulario-->
+                        <div class="campo"> <!--el primer campo-->
+                            <label><!--Etiqueta Nombre-->
+                                Nombre:
+                            </label>
+                            <input class="input-text" type="text" placeholder="Tu Nombre">
+                            <!--placeholder "marcador de posición"mostrará el texto "Tu Nombre" dentro del campo antes de que el usuario escriba algo.-->
+                        </div><!--fin del primer campo-->
 
-            <div class="alinear-derecha flex">
-              <input class="boton" type="submit" value="Enviar" />
-            </div>
-          </form>
-        </section>
+                        <div class="campo"> <!--segundo campo-->
+                            <label><!-Etiqueta Teléfono--->
+                                Teléfono:
+                            </label>
+                            <input class="input-text" type="tel" placeholder="Tu Teléfono"><!--campo para ingresar tu teléfono-->
+                        </div><!--fin del segundo campo-->
+
+                        <div class="campo"> <!--tercer campo-->
+                            <label><!-Etiqueta Correo--->
+                                Correo:
+                            </label>
+                            <input class="input-text" type="email" placeholder="Tu correo electrónico"><!--campo para ingresar el correo-->
+                        </div><!--fin del tercer campo-->
+
+                        <div class="campo"><!--cuarto campo-->
+                            <label><!--Etiqueta Mensaje-->
+                                Mensaje:
+                            </label>
+                            <textarea class="input-text"> </textarea>
+                            <!--para poner un cuadro grande de texto para editar con canpos-->
+                        </div><!--fin del cuarto campo-->
+                    </div> <!--FIN DEL CONTENEDOR DE LOS CAMPOS-->
+                    <div class="alinear-derecha flex">
+                      <input class="botton w-sm-100" id="sio" type="submit" value="Enviar"><!--para el boton de enviar-->
+                    </div>
+                </fieldset>
+            </form><!--FIN DEL FORMULARIO-->
+        </section> <!--fin de section del formulario-->
       </div>
     </main>
 
-    <footer>
+    <footer class="MA">
       <p>© Todos los derechos reservados por Russell Pérez 2024.</p>
     </footer>
 
