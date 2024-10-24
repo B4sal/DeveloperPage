@@ -145,3 +145,46 @@ body {
     width: 4rem; 
     height: 4rem;
 }
+
+/* Contenedor de servicios */
+.servicios {
+    display: flex; /* Configura Flexbox para alinear los servicios en fila */
+    flex-wrap: wrap; /* Permite que los servicios se envuelvan si no hay espacio */
+    justify-content: center; /* Centra los servicios en el contenedor */
+    margin-top: 2rem; /* Margen superior para separar de contenido previo */
+}
+
+/* Estilos para cada servicio */
+.servicio {
+    border-radius: 5px;
+    margin: 1rem; /* Margen para separar los servicios entre sí */
+    padding: 2rem;
+    text-align: center;
+    width: 300px; /* Ancho fijo para cada servicio (ajusta según sea necesario) */
+}
+
+.servicio h3 {
+    color: var(--secundario);
+    font-weight: normal;
+}
+
+.servicio p {
+    line-height: 2; /* Interlineado */
+    text-align: center;
+}
+
+.servicio .iconos {
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--primario);
+    border-radius: 50%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#misser {
+    text-align: center; /* Centra el texto */
+    margin: 0; /* Elimina márgenes por defecto */
+    padding: 20px; /* Espaciado adicional si es necesario */
+}
